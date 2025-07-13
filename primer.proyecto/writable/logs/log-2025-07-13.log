@@ -1,0 +1,167 @@
+ERROR - 2025-07-13 19:07:45 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'ProT4-45845702', 3306, '', 0)
+#1 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\app\Controllers\ApiUsuarios.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\CodeIgniter.php(933): App\Controllers\ApiUsuarios->index()
+#8 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiUsuarios))
+#9 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\app\Controllers\ApiUsuarios.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\CodeIgniter.php(933): App\Controllers\ApiUsuarios->index()
+#7 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiUsuarios))
+#8 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#13 {main}
+CRITICAL - 2025-07-13 19:07:45 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: apiusuarios]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ApiUsuarios.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiUsuarios->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiUsuarios))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp1\\htdocs\\ProT4-45845702\\primer.proyecto\\public\\index.php')
+ERROR - 2025-07-13 19:15:26 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), 'ProT4-45845702', 3306, '', 0)
+#1 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\app\Controllers\ApiUsuarios.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\CodeIgniter.php(933): App\Controllers\ApiUsuarios->index()
+#8 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiUsuarios))
+#9 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\app\Controllers\ApiUsuarios.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\CodeIgniter.php(933): App\Controllers\ApiUsuarios->index()
+#7 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiUsuarios))
+#8 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#13 {main}
+CRITICAL - 2025-07-13 19:15:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: apiusuarios]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ApiUsuarios.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiUsuarios->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiUsuarios))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp1\\htdocs\\ProT4-45845702\\primer.proyecto\\public\\index.php')
+ERROR - 2025-07-13 19:35:01 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'usuarios' in C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'usuarios', 3306, '', 0)
+#1 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\app\Controllers\ApiUsuarios.php(14): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\CodeIgniter.php(933): App\Controllers\ApiUsuarios->index()
+#8 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiUsuarios))
+#9 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'usuarios' in C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\app\Controllers\ApiUsuarios.php(14): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\CodeIgniter.php(933): App\Controllers\ApiUsuarios->index()
+#7 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiUsuarios))
+#8 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp1\htdocs\ProT4-45845702\primer.proyecto\system\rewrite.php(44): require_once('C:\\xampp1\\htdoc...')
+#13 {main}
+CRITICAL - 2025-07-13 19:35:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'usuarios'
+[Method: GET, Route: apiusuarios]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuarios`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ApiUsuarios.php(14): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ApiUsuarios->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiUsuarios))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp1\\htdocs\\ProT4-45845702\\primer.proyecto\\public\\index.php')
+CRITICAL - 2025-07-13 20:05:24 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "apilibros
+"
+[Method: GET, Route: apilibros%0A]
+in SYSTEMPATH\Router\Router.php on line 741.
+ 1 SYSTEMPATH\Router\Router.php(207): CodeIgniter\Router\Router->checkDisallowedChars('apilibros
+')
+ 2 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('apilibros
+')
+ 3 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp1\\htdocs\\ProT4-45845702\\primer.proyecto\\public\\index.php')
