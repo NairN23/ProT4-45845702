@@ -1,4 +1,5 @@
 <?php
+//Controlador de API REST para gestionar libros - TP4 ProT4-45845702
 namespace App\Controllers;
 
 use CodeIgniter\RESTful\ResourceController;
